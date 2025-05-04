@@ -1,0 +1,47 @@
+# Python Cache etc.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Virtuelle Umgebung (falls du eine hast/erstellst)
+venv/
+/venv/
+.venv/
+*/venv/
+env/
+/env/
+.env/
+*/env/
+ENV/
+*/ENV/
+
+# IDE Ordner
+.idea/
+.vscode/
+
+# Betriebssystem Dateien
+.DS_Store
+Thumbs.db
+
+# Große Daten- und temporäre Ordner (SEHR WICHTIG!)
+data_split_for_tuning/
+data/
+data_annotated/
+ocm_images_wms/
+ocm_ch_data/
+/ocm_ch_data/ # Sicher ist sicher
+daten/ # Dein anderer Testordner
+
+# Heruntergeladene/Generierte Daten
+ocm_coords.csv
+ocm_coords_with_ch.csv
+
+# Trainierte Modelle (SEHR WICHTIG!)
+*.pth
+*.pt
+
+# Log-Dateien etc.
+*.log
+```4.  **Speichern:** Speichere die `.gitignore`-Datei.
