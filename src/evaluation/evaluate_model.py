@@ -21,15 +21,12 @@ from torch.cuda.amp import autocast, GradScaler
 
 # --- 1. Konfiguration ---
 # Pfade
-ANNOTATED_DIR = Path("./data_annotated") # Wo deine sortierten Bilder sind
-# WICHTIG: Dieser Pfad muss auf den Ordner zeigen, der beim erfolgreichen
-# Training verwendet wurde (der die train/val Splits enthält)
-BASE_DATA_DIR = Path("./data_split_for_tuning") # Oder war es "./data"? Überprüfe den Ordnernamen!
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent # Geht 3 Ebenen hoch von src/evaluation/ zum Hackatron-Root
+ANNOTATED_DIR = PROJECT_ROOT / "data_annotated"
+BASE_DATA_DIR = PROJECT_ROOT / "data_split_for_tuning" # Oder "data", je nachdem
 TRAIN_DIR = BASE_DATA_DIR / "train"
 VAL_DIR = BASE_DATA_DIR / "validation"
-# WICHTIG: Dieser Pfad muss zur .pth-Datei deines besten Modells zeigen!
-# Überprüfe den genauen Namen im Projektordner!
-MODEL_TO_EVALUATE_PATH = Path("./best_tuned_cnn_model.pth") # Oder best_custom_cnn_model.pth?
+MODEL_TO_EVALUATE_PATH = PROJECT_ROOT / "models" / "best_tuned_cnn_model.pth"
 
 # Trainingsparameter (werden teilweise noch für DataLoader gebraucht)
 BATCH_SIZE = 128      # Sollte die gleiche sein wie beim Training für konsistente Val-Loader Erstellung

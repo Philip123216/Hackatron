@@ -28,11 +28,16 @@ Thumbs.db
 # Große Daten- und temporäre Ordner (SEHR WICHTIG!)
 data_split_for_tuning/
 data/
+data_processed/
+data_raw/
 data_annotated/
 ocm_images_wms/
 ocm_ch_data/
 /ocm_ch_data/ # Sicher ist sicher
+Annotator/ocm_ch_data/
 daten/ # Dein anderer Testordner
+
+*.rar
 
 # Heruntergeladene/Generierte Daten
 ocm_coords.csv
@@ -44,4 +49,3 @@ ocm_coords_with_ch.csv
 
 # Log-Dateien etc.
 *.log
-```4.  **Speichern:** Speichere die `.gitignore`-Datei.
