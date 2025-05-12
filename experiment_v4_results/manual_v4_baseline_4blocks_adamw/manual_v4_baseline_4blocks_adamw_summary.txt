@@ -1,0 +1,22 @@
+Sess: manual_v4_baseline_4blocks_adamw (Type: manual_experiment)
+  ValAcc: 0.9702
+  ValP(yes): 0.8571
+  ValR(yes): 0.8000
+  ValF1(yes): 0.8276
+  TrainTime: 3m 48s
+
+CM:
+Lbls: ['no', 'yes']
+[[151   2]
+ [  3  12]]
+
+Report:
+              precision    recall  f1-score   support
+
+          no       0.98      0.99      0.98       153
+         yes       0.86      0.80      0.83        15
+
+    accuracy                           0.97       168
+   macro avg       0.92      0.89      0.91       168
+weighted avg       0.97      0.97      0.97       168
+

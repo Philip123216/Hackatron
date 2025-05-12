@@ -1,0 +1,24 @@
+Sess: optuna_v4_deep_search (Type: optuna_search)
+  Optuna Best: {'lr': 0.002396641574102042, 'dropout': 0.6572403183746849, 'weight_decay': 0.0012077098786145797, 'num_conv_blocks': 6, 'first_layer_filters': 32, 'filter_increase_factor': 1.549590366979024, 'optimizer': 'AdamW'}
+  Optuna Best F1 (search): 0.9655
+  ValAcc: 0.9881
+  ValP(yes): 0.9333
+  ValR(yes): 0.9333
+  ValF1(yes): 0.9333
+  TrainTime: 3m 35s
+
+CM:
+Lbls: ['no', 'yes']
+[[152   1]
+ [  1  14]]
+
+Report:
+              precision    recall  f1-score   support
+
+          no       0.99      0.99      0.99       153
+         yes       0.93      0.93      0.93        15
+
+    accuracy                           0.99       168
+   macro avg       0.96      0.96      0.96       168
+weighted avg       0.99      0.99      0.99       168
+

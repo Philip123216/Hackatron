@@ -1,0 +1,6 @@
+Best Hyperparameters found by Optuna:
+  lr: 0.002006419185804407
+  dropout: 0.43840658765105406
+  weight_decay: 0.00027929677493377904
+  num_conv_blocks: 5
+Best Validation F1 during search: 0.9655

@@ -1,0 +1,22 @@
+Sess: manual_v4_onecyclelr_5blocks (Type: manual_experiment)
+  ValAcc: 0.9821
+  ValP(yes): 0.9286
+  ValR(yes): 0.8667
+  ValF1(yes): 0.8966
+  TrainTime: 3m 49s
+
+CM:
+Lbls: ['no', 'yes']
+[[152   1]
+ [  2  13]]
+
+Report:
+              precision    recall  f1-score   support
+
+          no       0.99      0.99      0.99       153
+         yes       0.93      0.87      0.90        15
+
+    accuracy                           0.98       168
+   macro avg       0.96      0.93      0.94       168
+weighted avg       0.98      0.98      0.98       168
+

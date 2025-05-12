@@ -1,0 +1,39 @@
+--- Experiment Summary (2025-05-12 20:11:03) ---
+Device: cuda
+Data Split: 80% Train / 20% Val (Seed: 42)
+  Train samples: 668, Val samples: 168
+  Pos_weight for 'yes' class: 10.32
+
+Optuna Search (100 trials, 15 epochs/trial):
+  Best Optuna Trial Value (Validation F1): 0.9333
+  Best Optuna Parameters:
+    lr: 0.0024906495698721093
+    dropout: 0.5807019414763228
+    weight_decay: 4.139905588377502e-05
+
+Final Model Training (50 epochs with best params):
+  Model saved to: C:\Users\pssol\PycharmProjects\Hackatron\optuna_experiment_results\best_tuned_cnn_model.pth
+  Best Validation F1 during final training: 0.9655
+  Training time for final model: 2m 11s
+
+Final Evaluation on Validation Set (Best Tuned Model):
+  Accuracy: 0.9940
+  Precision (yes): 1.0000
+  Recall (yes): 0.9333
+  F1-Score (yes): 0.9655
+
+Confusion Matrix (Validation Set):
+Labels: ['no', 'yes']
+[[153   0]
+ [  1  14]]
+
+Classification Report (Validation Set):
+              precision    recall  f1-score   support
+
+          no       0.99      1.00      1.00       153
+         yes       1.00      0.93      0.97        15
+
+    accuracy                           0.99       168
+   macro avg       1.00      0.97      0.98       168
+weighted avg       0.99      0.99      0.99       168
+

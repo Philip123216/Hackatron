@@ -1,0 +1,22 @@
+Experiment: exp05_rmsprop
+  Validation Accuracy: 0.9762
+  Validation Precision (yes): 0.8667
+  Validation Recall (yes): 0.8667
+  Validation F1-Score (yes): 0.8667
+  Training Time: 2m 27s
+
+CM:
+Labels: ['no', 'yes']
+[[151   2]
+ [  2  13]]
+
+Report:
+              precision    recall  f1-score   support
+
+          no       0.99      0.99      0.99       153
+         yes       0.87      0.87      0.87        15
+
+    accuracy                           0.98       168
+   macro avg       0.93      0.93      0.93       168
+weighted avg       0.98      0.98      0.98       168
+

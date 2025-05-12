@@ -1,0 +1,22 @@
+Session: manual_baseline_4blocks_adamw (Type: manual_experiment)
+  Validation Accuracy: 0.9643
+  Validation Precision (yes): 1.0000
+  Validation Recall (yes): 0.6000
+  Validation F1-Score (yes): 0.7500
+  Total Training Time: 2m 52s
+
+CM:
+Labels: ['no', 'yes']
+[[153   0]
+ [  6   9]]
+
+Report:
+              precision    recall  f1-score   support
+
+          no       0.96      1.00      0.98       153
+         yes       1.00      0.60      0.75        15
+
+    accuracy                           0.96       168
+   macro avg       0.98      0.80      0.87       168
+weighted avg       0.97      0.96      0.96       168
+
