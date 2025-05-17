@@ -32,13 +32,13 @@ EXPERIMENT_OUTPUT_DIR_BASE.mkdir(parents=True, exist_ok=True)
 # --- 1. Globale Konfiguration (Pfade relativ zum PROJECT_ROOT) ---
 ANNOTATED_DIR = PROJECT_ROOT / "data_annotated"
 # Eigener Datenordner für diesen Lauf (wird ggf. neu erstellt)
-BASE_DATA_DIR = EXPERIMENT_OUTPUT_DIR_BASE / "data_split_for_tuning"
+BASE_DATA_DIR = EXPERIMENT_OUTPUT_DIR_BASE / "data_split_for_tuning_long"
 TRAIN_DIR = BASE_DATA_DIR / "train"
 VAL_DIR = BASE_DATA_DIR / "validation"
 # Pfad, wo das finale, mit Optuna getunte Modell gespeichert wird
-FINAL_MODEL_SAVE_PATH = EXPERIMENT_OUTPUT_DIR_BASE / "best_tuned_cnn_model.pth"
+FINAL_MODEL_SAVE_PATH = EXPERIMENT_OUTPUT_DIR_BASE / "best_tuned_cnn_model_long.pth"
 # Optuna SQLite Datenbank Pfad
-OPTUNA_DB_PATH = EXPERIMENT_OUTPUT_DIR_BASE / "optuna_study.db"
+OPTUNA_DB_PATH = EXPERIMENT_OUTPUT_DIR_BASE / "optuna_study_long.db"
 
 
 # Trainingsparameter für Optuna und finales Training
@@ -46,7 +46,7 @@ BATCH_SIZE = 128 # Kann von Optuna ggf. noch überschrieben werden, wenn du es d
 NUM_WORKERS = 8    # Passe dies an deine CPU-Kerne an
 N_TRIALS = 100     # Anzahl der Optuna Trials
 EPOCHS_PER_TRIAL = 15 # Epochen für jeden einzelnen Optuna Trial
-FINAL_TRAINING_EPOCHS = 50 # Erhöht für das finale Training nach Optuna
+FINAL_TRAINING_EPOCHS = 75 # Erhöht für das finale Training nach Optuna
 
 # Bildparameter und Seeds
 IMG_SIZE = 250

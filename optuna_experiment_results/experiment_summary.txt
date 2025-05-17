@@ -1,20 +1,25 @@
---- Experiment Summary (2025-05-12 20:11:03) ---
+--- Experiment Summary (2025-05-13 12:16:27) ---
 Device: cuda
 Data Split: 80% Train / 20% Val (Seed: 42)
   Train samples: 668, Val samples: 168
   Pos_weight for 'yes' class: 10.32
 
 Optuna Search (100 trials, 15 epochs/trial):
-  Best Optuna Trial Value (Validation F1): 0.9333
+  Study Name: cnn_tuning_study_v2_arch_opt
+  Best Optuna Trial Value (Validation F1): 0.9655
   Best Optuna Parameters:
-    lr: 0.0024906495698721093
-    dropout: 0.5807019414763228
-    weight_decay: 4.139905588377502e-05
+    lr: 0.002586129468479637
+    dropout: 0.4725254690626744
+    weight_decay: 3.2005302528489703e-06
+    num_conv_blocks: 5
+    first_layer_filters: 32
+    filter_increase_factor: 1.6265635488885444
+    optimizer: AdamW
 
-Final Model Training (50 epochs with best params):
-  Model saved to: C:\Users\pssol\PycharmProjects\Hackatron\optuna_experiment_results\best_tuned_cnn_model.pth
+Final Model Training (75 epochs with best params):
+  Model saved to: C:\Users\pssol\PycharmProjects\Hackatron\optuna_experiment_results\best_tuned_cnn_model_long.pth
   Best Validation F1 during final training: 0.9655
-  Training time for final model: 2m 11s
+  Training time for final model: 2m 33s
 
 Final Evaluation on Validation Set (Best Tuned Model):
   Accuracy: 0.9940
