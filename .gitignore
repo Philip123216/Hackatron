@@ -1,51 +1,189 @@
-# Python Cache etc.
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.pkl
+*.py[cod]
+*$py.class
 
-# Virtuelle Umgebung (falls du eine hast/erstellst)
-venv/
-/venv/
-.venv/
-*/venv/
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so shouldn't be committed.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PEP 582; PEP 594
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
 env/
-/env/
-.env/
-*/env/
+venv/
 ENV/
-*/ENV/
+env.bak/
+venv.bak/
 
-# IDE Ordner
+# Spyder project settings
+.spyderproject
+.spyderworkspace
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm specific
 .idea/
+*.iws
+*.iml # Du hast Hackatron.iml und PythonProject.iml im .idea Ordner, .idea/ reicht
+
+# VS Code
 .vscode/
 
-# Betriebssystem Dateien
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-# Große Daten- und temporäre Ordner (SEHR WICHTIG!)
-data_split_for_tuning/
-data/
-data_processed/
-data_raw/
+# === Projektspezifisch Hackatron ===
+
+# Archiv-Ordner
+_archive/
+
+# Große Datenordner, die generiert werden oder zu groß für Git sind
+# (Wenn du data_annotated im Repo haben willst, kommentiere die nächste Zeile aus oder lösche sie)
 data_annotated/
-ocm_images_wms/
-ocm_ch_data/
-/ocm_ch_data/ # Sicher ist sicher
-Annotator/ocm_ch_data/
-daten/ # Dein anderer Testordner
+data_unprocessed/ # Wenn dieser Ordner auch sehr groß ist oder einfach nicht versioniert werden soll
+ocm_images_wms/ # Generierte WMS-Bilder
+data_split_for_* # Alle temporären Daten-Splits
+# Ergebnisordner sind oft groß. Überlege, ob du sie committen willst.
+# Wenn nicht, füge sie hinzu, z.B.:
+# experiment_v*_results/
+# optuna_experiment_results/
+# manual_experiment_results/
+# cross_validation_results_*/
 
+# Datenbanken (z.B. für Optuna)
+*.db
+# Wenn du deine optuna_study_with_cv.db behalten und versionieren willst, dann NICHT *.db hier!
+# ODER spezifischer:
+optuna_study_*.db # Ignoriert alle Optuna DBs, außer du fügst sie explizit hinzu
+
+# Komprimierte Dateien, die du nicht im Repo brauchst, wenn der Inhalt schon da ist
 *.rar
+*.zip
+*.gz
+# (Vorsicht mit *.gz, wenn du andere .gz Dateien hast, die du behalten willst)
 
-# Heruntergeladene/Generierte Daten
-ocm_coords.csv
-ocm_coords_with_ch.csv
-
-# Trainierte Modelle (SEHR WICHTIG!)
+# Modelle (sind meist groß)
+# Wenn du best_tuned_cnn_model_long.pth im Repo haben willst, musst du es
+# entweder explizit mit "git add -f best_tuned_cnn_model_long.pth" hinzufügen
+# oder die Regel hier anpassen.
 *.pth
 *.pt
 
-# Log-Dateien etc.
+# Spezifische CSVs, die generiert werden
+ocm_coords.csv
+ocm_coords_with_ch.csv
+
+# Log-Dateien (falls du welche erstellst)
 *.log
+
+# Temporäre Dateien von Matplotlib oder anderen Plots
+# (Normalerweise nicht nötig, wenn Plots direkt in Ergebnisordner gespeichert werden)
