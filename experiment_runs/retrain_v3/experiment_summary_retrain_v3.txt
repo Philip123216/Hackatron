@@ -1,0 +1,58 @@
+--- Experiment Zusammenfassung (retrain_v3 @ 2025-05-24 18:32:52) ---
+
+Hardware-Gerät: cuda
+Zufalls-Seed: 42
+Datenquelle für Aufteilung: 'data_annotated_kombiniert'
+  Anzahl Trainingsbilder: 836, Anzahl Validierungsbilder: 210
+  Aufteilungsverhältnis (Training): 80%
+  Gewicht für positive Klasse ('yes') in Loss-Funktion: 3.59
+
+Optuna Hyperparameter-Suche:
+  Anzahl durchgeführter Trials: 100
+  Maximale Epochen pro Trial: 50 (Early Stopping Patience: 8)
+  Optimierte Metrik: Validierungs-val_acc (Ziel: Maximieren)
+  Bester Optuna Trial Wert (val_acc): 0.9762
+  Beste gefundene Hyperparameter:
+    lr: 0.007056363336562911
+    dropout_rate: 0.32584188120291535
+    weight_decay: 7.025643118052813e-07
+    num_conv_blocks: 6
+    first_layer_filters: 16
+    filter_increase_factor: 1.4239117513348847
+    optimizer_name: RMSprop
+    rotation_degrees: 35
+    cj_brightness: 0.051793278734592704
+    cj_contrast: 0.2586363273798479
+    cj_saturation: 0.2799739268642097
+    cj_hue: 0.015323392125335268
+    hflip_p: 0.21215679906083476
+    vflip_p: 0.27915342225710726
+    rmsprop_alpha: 0.941020712743009
+
+Finales Modell Training:
+  Maximale Epochen: 150 (Early Stopping Patience: 15)
+  Modell gespeichert unter: C:\Users\pssol\PycharmProjects\Hackatron\experiment_runs\retrain_v3\final_trained_model\best_model_retrain_v3.pth
+  Beste Validierungs-val_acc während finalem Training: 0.9810
+  Trainingszeit für finales Modell: 2 Min 21 Sek
+
+Finale Evaluation des besten Modells auf dem Validierungsset:
+  Accuracy: 0.9810
+  Precision (für Klasse 'yes'): 0.9773
+  Recall (für Klasse 'yes'): 0.9348
+  F1-Score (für Klasse 'yes'): 0.9556
+
+Confusion Matrix (Validierungsset):
+  Labels: ['no', 'yes']
+[[163   1]
+ [  3  43]]
+
+Classification Report (Validierungsset):
+              precision    recall  f1-score   support
+
+          no       0.98      0.99      0.99       164
+         yes       0.98      0.93      0.96        46
+
+    accuracy                           0.98       210
+   macro avg       0.98      0.96      0.97       210
+weighted avg       0.98      0.98      0.98       210
+
