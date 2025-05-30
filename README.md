@@ -2,6 +2,8 @@
 
 Dieses Projekt bietet eine vollständige Pipeline für die binäre Bildklassifikation (z.B. Erkennung von Ladestationen auf Luftbildern) mit PyTorch. Es umfasst Datenbeschaffung, Annotation, Vorverarbeitung, Training (inkl. Hyperparameter-Optimierung), Evaluation, Fehleranalyse und Inferenz.
 
+* Im Teil Installation & Nutzung wir behandelt, wie der Code für die Evaluation der 100 Bilder benutzt werden kann.
+
 ---
 
 ## Inhaltsverzeichnis
