@@ -175,6 +175,8 @@ pip install -r requirements.txt
 Dieses Projekt enthält ein vortrainiertes Modell und ein Skript (evaluate_hackathon_dataset.py) zur Evaluation auf dem von den Dozierenden bereitgestellten Datensatz.
 Vorbereitung des Evaluationsdatensatzes:
 
+*Der eparking/ Ordner konnte leider nicht auf Github geladen werden und muss somit selber erstellt werden.
+
 -Kopieren Sie die 50 positiven Beispielbilder (mit Ladestationen) in den Ordner Hackatron/eparking/y/.
 -Kopieren Sie die 50 negativen Beispielbilder (ohne Ladestationen) in den Ordner Hackatron/eparking/n/.
 Ausführen des Evaluationsskripts:
